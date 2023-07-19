@@ -1,0 +1,926 @@
+Connected to Dynamips VM "R2" (ID 6, type c3600) - Console port
+Press ENTER to get the prompt.
+OWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.947: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:05.267: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 07:32 by prod_rel_team
+*Mar  1 00:00:05.291: %SNMP-5-COLDSTART: SNMP agent on host R2 is undergoing a cold start
+*Mar  1 00:00:05.467: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.471: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.951: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.955: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.959: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.963: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+R2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#line vty 0 14
+R2(config-line)#no privilege level 15
+R2(config-line)#exit
+R2(config)#interface e1/0
+R2(config-if)#no shutdown
+R2(config-if)#ip address 12.1.1.2 255.255.255.0
+R2(config-if)#exit
+R2(config)#interface e1/1
+R2(config-if)#no shutdown
+R2(config-if)#ip address 13.1.1.1 255.255.255.0
+R2(config-if)#exit
+R2(config)#interface e1/2
+R2(config-if)#no shutdown
+R2(config-if)#ip address 16.1.1.2 255.255.255.0
+R2(config-if)#exit
+R2(config)#interface loopback 1
+R2(config-if)#no shutdown
+R2(config-if)#ip address 192.168.2.1 255.255.255.0
+R2(config-if)#exit
+R2(config)#end
+R2#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES unset  administratively down down    
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+Ethernet1/0                12.1.1.2        YES manual up                    up      
+Ethernet1/1                13.1.1.1        YES manual up                    up      
+Ethernet1/2                16.1.1.2        YES manual up                    up      
+Ethernet1/3                unassigned      YES unset  administratively down down    
+Loopback1                  192.168.2.1     YES manual up                    up      
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+*Mar  1 00:00:27.191: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:00:27.771: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:00:28.127: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:28.475: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:28.579: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:29.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:29.483: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:29.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to up
+R2#
+R2#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#ip route 12.1.1.0 255.255.255.0 e1/0
+R2(config)#ip route 17.1.1.0 255.255.255.0 e1/2
+R2(config)#ip route 192.168.1.0 255.255.255.0 e1/0
+R2(config)#ip route 192.168.4.0 255.255.255.0 e1/1
+R2(config)#ip route 192.168.3.0 255.255.255.0 e1/1
+R2(config)#ip route 13.1.1.0 255.255.255.0 e1/1
+R2(config)#ip route 15.1.1.0 255.255.255.0 e1/2
+R2(config)#ip route 14.1.1.0 255.255.255.0 e1/1
+R2(config)#ip route 16.1.1.0 255.255.255.0 e1/2
+R2(config)#ip route 192.168.5.0 255.255.255.0 e1/2
+R2(config)#
+R2(config)#end
+R2#show running | include ip route
+
+*Mar  1 00:01:54.927: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/0
+ip route 13.1.1.0 255.255.255.0 Ethernet1/1
+ip route 14.1.1.0 255.255.255.0 Ethernet1/1
+ip route 15.1.1.0 255.255.255.0 Ethernet1/2
+ip route 16.1.1.0 255.255.255.0 Ethernet1/2
+ip route 17.1.1.0 255.255.255.0 Ethernet1/2
+ip route 192.168.1.0 255.255.255.0 Ethernet1/0
+ip route 192.168.3.0 255.255.255.0 Ethernet1/1
+ip route 192.168.4.0 255.255.255.0 Ethernet1/1
+ip route 192.168.5.0 255.255.255.0 Ethernet1/2
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+Connected to Dynamips VM "R5" (ID 5, type c3600) - Console port
+Press ENTER to get the prompt.
+OWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.947: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:05.263: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 07:32 by prod_rel_team
+*Mar  1 00:00:05.287: %SNMP-5-COLDSTART: SNMP agent on host R5 is undergoing a cold start
+*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.951: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.955: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.959: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.963: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+R5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#line vty 0 14
+R5(config-line)#no privilege level 15
+R5(config-line)#exit
+R5(config)#interface e1/0
+R5(config-if)#no shutdown
+R5(config-if)#ip address 17.1.1.1 255.255.255.0
+R5(config-if)#exit
+R5(config)#interface e1/1
+R5(config-if)#no shutdown
+R5(config-if)#ip address 15.1.1.1 255.255.255.0
+R5(config-if)#exit
+R5(config)#interface e1/2
+R5(config-if)#no shutdown
+R5(config-if)#ip address 16.1.1.1 255.255.255.0
+R5(config-if)#exit
+R5(config)#interface loopback 1
+R5(config-if)#no shutdown
+R5(config-if)#ip address 192.168.5.1 255.255.255.0
+R5(config-if)#exit
+R5(config)#end
+R5#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES unset  administratively down down    
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+Ethernet1/0                17.1.1.1        YES manual up                    up      
+Ethernet1/1                15.1.1.1        YES manual up                    up      
+Ethernet1/2                16.1.1.1        YES manual up                    up      
+Ethernet1/3                unassigned      YES unset  administratively down down    
+Loopback1                  192.168.5.1     YES manual up                    up      
+R5#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R5 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+*Mar  1 00:00:35.179: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:00:35.755: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:00:36.115: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:36.455: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:36.567: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:37.115: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:37.455: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:37.567: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to up
+R5#
+R5#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#ip route 12.1.1.0 255.255.255.0 e1/2
+R5(config)#ip route 17.1.1.0 255.255.255.0 e1/0
+R5(config)#ip route 192.168.1.0 255.255.255.0 e1/0
+R5(config)#ip route 192.168.4.0 255.255.255.0 e1/1
+R5(config)#ip route 192.168.3.0 255.255.255.0 e1/1
+R5(config)#ip route 13.1.1.0 255.255.255.0 e1/2
+R5(config)#ip route 15.1.1.0 255.255.255.0 e1/1
+R5(config)#ip route 14.1.1.0 255.255.255.0 e1/1
+R5(config)#ip route 192.168.2.0 255.255.255.0 e1/2
+R5(config)#ip route 16.1.1.0 255.255.255.0 e1/2
+R5(config)#
+R5(config)#end
+R5#show running | include ip route
+
+*Mar  1 00:02:00.319: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/2
+ip route 13.1.1.0 255.255.255.0 Ethernet1/2
+ip route 14.1.1.0 255.255.255.0 Ethernet1/1
+ip route 15.1.1.0 255.255.255.0 Ethernet1/1
+ip route 16.1.1.0 255.255.255.0 Ethernet1/2
+ip route 17.1.1.0 255.255.255.0 Ethernet1/0
+ip route 192.168.1.0 255.255.255.0 Ethernet1/0
+ip route 192.168.2.0 255.255.255.0 Ethernet1/2
+ip route 192.168.3.0 255.255.255.0 Ethernet1/1
+ip route 192.168.4.0 255.255.255.0 Ethernet1/1
+R5#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R5 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+Connected to Dynamips VM "R1" (ID 1, type c3600) - Console port
+Press ENTER to get the prompt.
+ to up
+*Mar  1 00:00:04.499: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:04.503: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:04.507: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:04.507: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.951: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:05.279: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 07:32 by prod_rel_team
+*Mar  1 00:00:05.303: %SNMP-5-COLDSTART: SNMP agent on host R1 is undergoing a cold start
+*Mar  1 00:00:05.595: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.603: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.955: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.959: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.963: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.975: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#line vty 0 14
+R1(config-line)#no privilege level 15
+R1(config-line)#exit
+R1(config)#interface e1/1
+R1(config-if)#no shutdown
+R1(config-if)#ip address 12.1.1.1 255.255.255.0
+R1(config-if)#exit
+R1(config)#interface e1/0
+R1(config-if)#no shutdown
+R1(config-if)#ip address 17.1.1.2 255.255.255.0
+R1(config-if)#exit
+R1(config)#interface loopback 1
+R1(config-if)#no shutdown
+R1(config-if)#ip address 192.168.1.1 255.255.255.0
+R1(config-if)#exit
+R1(config)#end
+R1#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES unset  administratively down down    
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+Ethernet1/0                17.1.1.2        YES manual up                    up      
+Ethernet1/1                12.1.1.1        YES manual up                    up      
+Ethernet1/2                unassigned      YES unset  administratively down down    
+Ethernet1/3                unassigned      YES unset  administratively down down    
+Loopback1                  192.168.1.1     YES manual up                    up      
+R1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Mar  1 00:00:42.099: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:00:42.671: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:00:43.131: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:43.479: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:44.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+R1#
+*Mar  1 00:00:44.479: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R1#
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#ip route 192.168.3.0 255.255.255.0 e1/1
+R1(config)#ip route 16.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 13.1.1.0 255.255.255.0 e1/1
+R1(config)#ip route 12.1.1.0 255.255.255.0 e1/1
+R1(config)#ip route 14.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 192.168.2.0 255.255.255.0 e1/1
+R1(config)#ip route 192.168.4.0 255.255.255.0 e1/0
+R1(config)#ip route 17.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 15.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 192.168.5.0 255.255.255.0 e1/0
+R1(config)#
+R1(config)#end
+R1#show running | include ip route
+
+*Mar  1 00:02:11.311: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/1
+ip route 13.1.1.0 255.255.255.0 Ethernet1/1
+ip route 14.1.1.0 255.255.255.0 Ethernet1/0
+ip route 15.1.1.0 255.255.255.0 Ethernet1/0
+ip route 16.1.1.0 255.255.255.0 Ethernet1/0
+ip route 17.1.1.0 255.255.255.0 Ethernet1/0
+ip route 192.168.2.0 255.255.255.0 Ethernet1/1
+ip route 192.168.3.0 255.255.255.0 Ethernet1/1
+ip route 192.168.4.0 255.255.255.0 Ethernet1/0
+ip route 192.168.5.0 255.255.255.0 Ethernet1/0
+R1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+Connected to Dynamips VM "R3" (ID 3, type c3600) - Console port
+Press ENTER to get the prompt.
+tate to up
+*Mar  1 00:00:04.451: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:04.455: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:04.455: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:04.459: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.903: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:05.223: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 07:32 by prod_rel_team
+*Mar  1 00:00:05.247: %SNMP-5-COLDSTART: SNMP agent on host R3 is undergoing a cold start
+*Mar  1 00:00:05.547: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.547: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.907: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.911: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.915: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.919: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.923: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.927: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+R3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#line vty 0 14
+R3(config-line)#no privilege level 15
+R3(config-line)#exit
+R3(config)#interface e1/0
+R3(config-if)#no shutdown
+R3(config-if)#ip address 13.1.1.2 255.255.255.0
+R3(config-if)#exit
+R3(config)#interface e1/1
+R3(config-if)#no shutdown
+R3(config-if)#ip address 14.1.1.1 255.255.255.0
+R3(config-if)#exit
+R3(config)#interface loopback 1
+R3(config-if)#no shutdown
+R3(config-if)#ip address 192.168.3.1 255.255.255.0
+R3(config-if)#exit
+R3(config)#end
+R3#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES unset  administratively down down    
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+Ethernet1/0                13.1.1.2        YES manual up                    up      
+Ethernet1/1                14.1.1.1        YES manual up                    up      
+Ethernet1/2                unassigned      YES unset  administratively down down    
+Ethernet1/3                unassigned      YES unset  administratively down down    
+Loopback1                  192.168.3.1     YES manual up                    up      
+R3#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R3 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+*Mar  1 00:00:49.031: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:00:49.607: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:00:50.079: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:50.419: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:51.079: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R3#
+*Mar  1 00:00:51.419: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+R3#
+R3#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#ip route 16.1.1.0 255.255.255.0 e1/0
+R3(config)#ip route 13.1.1.0 255.255.255.0 e1/0
+R3(config)#ip route 12.1.1.0 255.255.255.0 e1/0
+R3(config)#ip route 17.1.1.0 255.255.255.0 e1/0
+R3(config)#ip route 15.1.1.0 255.255.255.0 e1/1
+R3(config)#ip route 192.168.1.0 255.255.255.0 e1/0
+R3(config)#ip route 192.168.2.0 255.255.255.0 e1/0
+R3(config)#ip route 192.168.5.0 255.255.255.0 e1/0
+R3(config)#ip route 14.1.1.0 255.255.255.0 e1/1
+R3(config)#ip route 192.168.4.0 255.255.255.0 e1/1
+R3(config)#
+R3(config)#end
+R3#show running | include ip route
+ip route 12.1.1.0 255.255.255.0 Ethernet1/0
+ip route 13.1.1.0 255.255.255.0 Ethernet1/0
+ip route 14.1.1.0 255.255.255.0 Ethernet1/1
+ip route 15.1.1.0 255.255.255.0 Ethernet1/1
+ip route 16.1.1.0 255.255.255.0 Ethernet1/0
+ip route 17.1.1.0 255.255.255.0 Ethernet1/0
+ip route 192.168.1.0 255.255.255.0 Ethernet1/0
+ip route 192.168.2.0 255.255.255.0 Ethernet1/0
+ip route 192.168.4.0 255.255.255.0 Ethernet1/1
+ip route 192.168.5.0 255.255.255.0 Ethernet1/0
+R3#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R3 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+*Mar  1 00:02:18.747: %SYS-5-CONFIG_I: Configured from console by consoleConnected to Dynamips VM "R4" (ID 4, type c3600) - Console port
+Press ENTER to get the prompt.
+et1/0, changed state to up
+*Mar  1 00:00:04.515: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:04.519: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:04.523: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:04.523: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.963: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:05.303: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Wed 18-Aug-10 07:32 by prod_rel_team
+*Mar  1 00:00:05.323: %SNMP-5-COLDSTART: SNMP agent on host R4 is undergoing a cold start
+*Mar  1 00:00:05.619: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.619: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.627: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.975: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.979: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.983: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.987: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+R4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#line vty 0 14
+R4(config-line)#no privilege level 15
+R4(config-line)#exit
+R4(config)#interface e1/0
+R4(config-if)#no shutdown
+R4(config-if)#ip address 14.1.1.2 255.255.255.0
+R4(config-if)#exit
+R4(config)#interface e1/1
+R4(config-if)#no shutdown
+R4(config-if)#ip address 15.1.1.2 255.255.255.0
+R4(config-if)#exit
+R4(config)#interface loopback 1
+R4(config-if)#no shutdown
+R4(config-if)#ip address 192.168.4.1 255.255.255.0
+R4(config-if)#exit
+R4(config)#end
+R4#show ip interface brief
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES unset  administratively down down    
+FastEthernet0/1            unassigned      YES unset  administratively down down    
+Ethernet1/0                14.1.1.2        YES manual up                    up      
+Ethernet1/1                15.1.1.2        YES manual up                    up      
+Ethernet1/2                unassigned      YES unset  administratively down down    
+Ethernet1/3                unassigned      YES unset  administratively down down    
+Loopback1                  192.168.4.1     YES manual up                    up      
+R4#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R4 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+*Mar  1 00:00:57.111: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:00:57.683: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:00:58.155: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:00:58.495: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:59.155: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R4#
+*Mar  1 00:00:59.495: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+R4#
+R4#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#ip route 192.168.3.0 255.255.255.0 e1/0
+R4(config)#ip route 16.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 13.1.1.0 255.255.255.0 e1/0
+R4(config)#ip route 12.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 14.1.1.0 255.255.255.0 e1/0
+R4(config)#ip route 192.168.2.0 255.255.255.0 e1/0
+R4(config)#ip route 17.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 15.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 192.168.1.0 255.255.255.0 e1/1
+R4(config)#ip route 192.168.5.0 255.255.255.0 e1/1
+R4(config)#
+R4(config)#end
+R4#show running | include ip route
+
+*Mar  1 00:02:25.007: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/1
+ip route 13.1.1.0 255.255.255.0 Ethernet1/0
+ip route 14.1.1.0 255.255.255.0 Ethernet1/0
+ip route 15.1.1.0 255.255.255.0 Ethernet1/1
+ip route 16.1.1.0 255.255.255.0 Ethernet1/1
+ip route 17.1.1.0 255.255.255.0 Ethernet1/1
+ip route 192.168.1.0 255.255.255.0 Ethernet1/1
+ip route 192.168.2.0 255.255.255.0 Ethernet1/0
+ip route 192.168.3.0 255.255.255.0 Ethernet1/0
+ip route 192.168.5.0 255.255.255.0 Ethernet1/1
+R4#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R4 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
