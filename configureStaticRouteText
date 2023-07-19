@@ -1,25 +1,25 @@
 Connected to Dynamips VM "R2" (ID 6, type c3600) - Console port
 Press ENTER to get the prompt.
-OWN: Line protocol on Interface IPv6-mpls, changed state to up
-*Mar  1 00:00:04.947: %SYS-5-CONFIG_I: Configured from memory by console
-*Mar  1 00:00:05.267: %SYS-5-RESTART: System restarted --
+ on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.539: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:04.835: %SYS-5-RESTART: System restarted --
 Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Wed 18-Aug-10 07:32 by prod_rel_team
-*Mar  1 00:00:05.291: %SNMP-5-COLDSTART: SNMP agent on host R2 is undergoing a cold start
-*Mar  1 00:00:05.467: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
-*Mar  1 00:00:05.471: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
-*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
-*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
-*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
-*Mar  1 00:00:05.587: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
-*Mar  1 00:00:06.951: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
-*Mar  1 00:00:06.955: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-*Mar  1 00:00:06.959: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
-*Mar  1 00:00:06.963: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
-*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
-*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+*Mar  1 00:00:04.859: %SNMP-5-COLDSTART: SNMP agent on host R2 is undergoing a cold start
+*Mar  1 00:00:05.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.135: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.139: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.143: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.539: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.547: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.551: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.555: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.559: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.563: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
 R2#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
 R2(config)#line vty 0 14
@@ -100,32 +100,37 @@ Press RETURN to get started.
 
 
 
-*Mar  1 00:00:27.191: %SYS-5-CONFIG_I: Configured from console by console
-*Mar  1 00:00:27.771: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
-*Mar  1 00:00:28.127: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:28.475: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:28.579: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
-*Mar  1 00:00:29.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:29.483: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:29.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to up
+
+
+
+
+
+
+*Mar  1 00:01:22.767: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:23.347: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:01:23.695: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:24.047: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:24.159: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:01:24.695: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:25.047: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:25.159: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to up
 R2#
 R2#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
+R2(config)#ip route 192.168.1.0 255.255.255.0 e1/0
 R2(config)#ip route 12.1.1.0 255.255.255.0 e1/0
 R2(config)#ip route 17.1.1.0 255.255.255.0 e1/2
-R2(config)#ip route 192.168.1.0 255.255.255.0 e1/0
-R2(config)#ip route 192.168.4.0 255.255.255.0 e1/1
-R2(config)#ip route 192.168.3.0 255.255.255.0 e1/1
 R2(config)#ip route 13.1.1.0 255.255.255.0 e1/1
 R2(config)#ip route 15.1.1.0 255.255.255.0 e1/2
 R2(config)#ip route 14.1.1.0 255.255.255.0 e1/1
-R2(config)#ip route 16.1.1.0 255.255.255.0 e1/2
+R2(config)#ip route 192.168.3.0 255.255.255.0 e1/1
+R2(config)#ip route 192.168.4.0 255.255.255.0 e1/1
 R2(config)#ip route 192.168.5.0 255.255.255.0 e1/2
+R2(config)#ip route 16.1.1.0 255.255.255.0 e1/2
 R2(config)#
 R2(config)#end
 R2#show running | include ip route
-
-*Mar  1 00:01:54.927: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/0
+ip route 12.1.1.0 255.255.255.0 Ethernet1/0
 ip route 13.1.1.0 255.255.255.0 Ethernet1/1
 ip route 14.1.1.0 255.255.255.0 Ethernet1/1
 ip route 15.1.1.0 255.255.255.0 Ethernet1/2
@@ -184,28 +189,29 @@ Press RETURN to get started.
 
 
 
-Connected to Dynamips VM "R5" (ID 5, type c3600) - Console port
+
+*Mar  1 00:02:51.311: %SYS-5-CONFIG_I: Configured from console by consoleConnected to Dynamips VM "R5" (ID 5, type c3600) - Console port
 Press ENTER to get the prompt.
-OWN: Line protocol on Interface IPv6-mpls, changed state to up
-*Mar  1 00:00:04.947: %SYS-5-CONFIG_I: Configured from memory by console
-*Mar  1 00:00:05.263: %SYS-5-RESTART: System restarted --
+-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.495: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:04.791: %SYS-5-RESTART: System restarted --
 Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Wed 18-Aug-10 07:32 by prod_rel_team
-*Mar  1 00:00:05.287: %SNMP-5-COLDSTART: SNMP agent on host R5 is undergoing a cold start
-*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
-*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
-*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
-*Mar  1 00:00:05.575: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
-*Mar  1 00:00:05.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
-*Mar  1 00:00:05.579: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
-*Mar  1 00:00:06.951: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
-*Mar  1 00:00:06.955: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-*Mar  1 00:00:06.959: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
-*Mar  1 00:00:06.963: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
-*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
-*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+*Mar  1 00:00:04.815: %SNMP-5-COLDSTART: SNMP agent on host R5 is undergoing a cold start
+*Mar  1 00:00:05.083: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.083: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.087: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.087: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.087: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.091: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.499: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.503: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.507: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.511: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.515: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.519: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
 R5#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
 R5(config)#line vty 0 14
@@ -280,38 +286,32 @@ R5 con0 is now available
 Press RETURN to get started.
 
 
-
-
-
-
-
-
-*Mar  1 00:00:35.179: %SYS-5-CONFIG_I: Configured from console by console
-*Mar  1 00:00:35.755: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
-*Mar  1 00:00:36.115: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:36.455: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:36.567: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
-*Mar  1 00:00:37.115: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:37.455: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:37.567: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to up
+*Mar  1 00:01:30.711: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:31.291: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:01:31.647: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:31.987: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:32.103: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:01:32.647: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:32.987: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:33.103: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to up
 R5#
 R5#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
+R5(config)#ip route 192.168.1.0 255.255.255.0 e1/0
 R5(config)#ip route 12.1.1.0 255.255.255.0 e1/2
 R5(config)#ip route 17.1.1.0 255.255.255.0 e1/0
-R5(config)#ip route 192.168.1.0 255.255.255.0 e1/0
-R5(config)#ip route 192.168.4.0 255.255.255.0 e1/1
-R5(config)#ip route 192.168.3.0 255.255.255.0 e1/1
 R5(config)#ip route 13.1.1.0 255.255.255.0 e1/2
 R5(config)#ip route 15.1.1.0 255.255.255.0 e1/1
 R5(config)#ip route 14.1.1.0 255.255.255.0 e1/1
+R5(config)#ip route 192.168.3.0 255.255.255.0 e1/1
+R5(config)#ip route 192.168.4.0 255.255.255.0 e1/1
 R5(config)#ip route 192.168.2.0 255.255.255.0 e1/2
 R5(config)#ip route 16.1.1.0 255.255.255.0 e1/2
 R5(config)#
 R5(config)#end
 R5#show running | include ip route
 
-*Mar  1 00:02:00.319: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/2
+*Mar  1 00:02:57.783: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/2
 ip route 13.1.1.0 255.255.255.0 Ethernet1/2
 ip route 14.1.1.0 255.255.255.0 Ethernet1/1
 ip route 15.1.1.0 255.255.255.0 Ethernet1/1
@@ -372,32 +372,34 @@ Press RETURN to get started.
 
 
 
+
+
 Connected to Dynamips VM "R1" (ID 1, type c3600) - Console port
 Press ENTER to get the prompt.
- to up
-*Mar  1 00:00:04.499: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:04.503: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
-*Mar  1 00:00:04.507: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
-*Mar  1 00:00:04.507: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
-*Mar  1 00:00:04.951: %SYS-5-CONFIG_I: Configured from memory by console
-*Mar  1 00:00:05.279: %SYS-5-RESTART: System restarted --
+ state to up
+*Mar  1 00:00:04.099: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:04.103: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:04.107: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:04.111: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.515: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:04.819: %SYS-5-RESTART: System restarted --
 Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Wed 18-Aug-10 07:32 by prod_rel_team
-*Mar  1 00:00:05.303: %SNMP-5-COLDSTART: SNMP agent on host R1 is undergoing a cold start
-*Mar  1 00:00:05.595: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
-*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
-*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
-*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
-*Mar  1 00:00:05.599: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
-*Mar  1 00:00:05.603: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
-*Mar  1 00:00:06.955: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
-*Mar  1 00:00:06.959: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-*Mar  1 00:00:06.963: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
-*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
-*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
-*Mar  1 00:00:06.975: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+*Mar  1 00:00:04.843: %SNMP-5-COLDSTART: SNMP agent on host R1 is undergoing a cold start
+*Mar  1 00:00:05.115: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.115: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.119: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.119: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.119: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.119: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.519: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.523: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.527: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.531: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.535: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.543: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
 R1#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
 R1(config)#line vty 0 14
@@ -474,37 +476,31 @@ Press RETURN to get started.
 
 
 
-
-
-
-
-
-
-*Mar  1 00:00:42.099: %SYS-5-CONFIG_I: Configured from console by console
-*Mar  1 00:00:42.671: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
-*Mar  1 00:00:43.131: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:43.479: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:44.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:37.655: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:38.231: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:01:38.687: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:39.043: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:39.687: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
 R1#
-*Mar  1 00:00:44.479: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:40.043: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
 R1#
 R1#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
-R1(config)#ip route 192.168.3.0 255.255.255.0 e1/1
-R1(config)#ip route 16.1.1.0 255.255.255.0 e1/0
 R1(config)#ip route 13.1.1.0 255.255.255.0 e1/1
-R1(config)#ip route 12.1.1.0 255.255.255.0 e1/1
 R1(config)#ip route 14.1.1.0 255.255.255.0 e1/0
 R1(config)#ip route 192.168.2.0 255.255.255.0 e1/1
-R1(config)#ip route 192.168.4.0 255.255.255.0 e1/0
-R1(config)#ip route 17.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 192.168.3.0 255.255.255.0 e1/1
+R1(config)#ip route 16.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 12.1.1.0 255.255.255.0 e1/1
 R1(config)#ip route 15.1.1.0 255.255.255.0 e1/0
+R1(config)#ip route 17.1.1.0 255.255.255.0 e1/0
 R1(config)#ip route 192.168.5.0 255.255.255.0 e1/0
+R1(config)#ip route 192.168.4.0 255.255.255.0 e1/0
 R1(config)#
 R1(config)#end
 R1#show running | include ip route
 
-*Mar  1 00:02:11.311: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/1
+*Mar  1 00:03:05.487: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/1
 ip route 13.1.1.0 255.255.255.0 Ethernet1/1
 ip route 14.1.1.0 255.255.255.0 Ethernet1/0
 ip route 15.1.1.0 255.255.255.0 Ethernet1/0
@@ -557,39 +553,32 @@ R1 con0 is now available
 Press RETURN to get started.
 
 
-
-
-
-
-
-
-
-Connected to Dynamips VM "R3" (ID 3, type c3600) - Console port
+R1#Connected to Dynamips VM "R3" (ID 3, type c3600) - Console port
 Press ENTER to get the prompt.
-tate to up
-*Mar  1 00:00:04.451: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:04.455: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
-*Mar  1 00:00:04.455: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
-*Mar  1 00:00:04.459: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
-*Mar  1 00:00:04.903: %SYS-5-CONFIG_I: Configured from memory by console
-*Mar  1 00:00:05.223: %SYS-5-RESTART: System restarted --
+d state to up
+*Mar  1 00:00:04.107: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:04.111: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:04.115: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:04.119: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.523: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:04.823: %SYS-5-RESTART: System restarted --
 Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Wed 18-Aug-10 07:32 by prod_rel_team
-*Mar  1 00:00:05.247: %SNMP-5-COLDSTART: SNMP agent on host R3 is undergoing a cold start
-*Mar  1 00:00:05.547: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
-*Mar  1 00:00:05.547: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
-*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
-*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
-*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
-*Mar  1 00:00:05.551: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
-*Mar  1 00:00:06.907: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
-*Mar  1 00:00:06.911: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-*Mar  1 00:00:06.915: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
-*Mar  1 00:00:06.919: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
-*Mar  1 00:00:06.923: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
-*Mar  1 00:00:06.927: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+*Mar  1 00:00:04.847: %SNMP-5-COLDSTART: SNMP agent on host R3 is undergoing a cold start
+*Mar  1 00:00:05.123: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.123: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.127: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.131: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.527: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.531: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.535: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.539: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.543: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.551: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
 R3#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
 R3(config)#line vty 0 14
@@ -663,37 +652,32 @@ Press RETURN to get started.
 
 
 
-
-
-
-
-
-
-
-*Mar  1 00:00:49.031: %SYS-5-CONFIG_I: Configured from console by console
-*Mar  1 00:00:49.607: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
-*Mar  1 00:00:50.079: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:50.419: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:51.079: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:44.631: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:45.207: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
 R3#
-*Mar  1 00:00:51.419: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:45.675: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:46.015: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:46.675: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+R3#
+*Mar  1 00:01:47.015: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
 R3#
 R3#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
-R3(config)#ip route 16.1.1.0 255.255.255.0 e1/0
 R3(config)#ip route 13.1.1.0 255.255.255.0 e1/0
-R3(config)#ip route 12.1.1.0 255.255.255.0 e1/0
+R3(config)#ip route 192.168.1.0 255.255.255.0 e1/0
 R3(config)#ip route 17.1.1.0 255.255.255.0 e1/0
 R3(config)#ip route 15.1.1.0 255.255.255.0 e1/1
-R3(config)#ip route 192.168.1.0 255.255.255.0 e1/0
-R3(config)#ip route 192.168.2.0 255.255.255.0 e1/0
 R3(config)#ip route 192.168.5.0 255.255.255.0 e1/0
-R3(config)#ip route 14.1.1.0 255.255.255.0 e1/1
+R3(config)#ip route 192.168.2.0 255.255.255.0 e1/0
+R3(config)#ip route 16.1.1.0 255.255.255.0 e1/0
+R3(config)#ip route 12.1.1.0 255.255.255.0 e1/0
 R3(config)#ip route 192.168.4.0 255.255.255.0 e1/1
+R3(config)#ip route 14.1.1.0 255.255.255.0 e1/1
 R3(config)#
 R3(config)#end
 R3#show running | include ip route
-ip route 12.1.1.0 255.255.255.0 Ethernet1/0
+
+*Mar  1 00:03:14.855: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/0
 ip route 13.1.1.0 255.255.255.0 Ethernet1/0
 ip route 14.1.1.0 255.255.255.0 Ethernet1/1
 ip route 15.1.1.0 255.255.255.0 Ethernet1/1
@@ -750,32 +734,34 @@ Press RETURN to get started.
 
 
 
-*Mar  1 00:02:18.747: %SYS-5-CONFIG_I: Configured from console by consoleConnected to Dynamips VM "R4" (ID 4, type c3600) - Console port
+
+
+Connected to Dynamips VM "R4" (ID 4, type c3600) - Console port
 Press ENTER to get the prompt.
-et1/0, changed state to up
-*Mar  1 00:00:04.515: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:04.519: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
-*Mar  1 00:00:04.523: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
-*Mar  1 00:00:04.523: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
-*Mar  1 00:00:04.963: %SYS-5-CONFIG_I: Configured from memory by console
-*Mar  1 00:00:05.303: %SYS-5-RESTART: System restarted --
+nged state to up
+*Mar  1 00:00:04.091: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:00:04.095: %LINK-3-UPDOWN: Interface Ethernet1/2, changed state to up
+*Mar  1 00:00:04.099: %LINK-3-UPDOWN: Interface Ethernet1/3, changed state to up
+*Mar  1 00:00:04.103: %LINEPROTO-5-UPDOWN: Line protocol on Interface IPv6-mpls, changed state to up
+*Mar  1 00:00:04.507: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar  1 00:00:04.807: %SYS-5-RESTART: System restarted --
 Cisco IOS Software, 3600 Software (C3660-A3JK9S-M), Version 12.4(25d), RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2010 by Cisco Systems, Inc.
 Compiled Wed 18-Aug-10 07:32 by prod_rel_team
-*Mar  1 00:00:05.323: %SNMP-5-COLDSTART: SNMP agent on host R4 is undergoing a cold start
-*Mar  1 00:00:05.619: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
-*Mar  1 00:00:05.619: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
-*Mar  1 00:00:05.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
-*Mar  1 00:00:05.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
-*Mar  1 00:00:05.623: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
-*Mar  1 00:00:05.627: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
-*Mar  1 00:00:06.967: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
-*Mar  1 00:00:06.971: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
-*Mar  1 00:00:06.975: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
-*Mar  1 00:00:06.979: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
-*Mar  1 00:00:06.983: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
-*Mar  1 00:00:06.987: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
+*Mar  1 00:00:04.831: %SNMP-5-COLDSTART: SNMP agent on host R4 is undergoing a cold start
+*Mar  1 00:00:05.107: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/0, changed state to down
+*Mar  1 00:00:05.111: %LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+*Mar  1 00:00:05.111: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to down
+*Mar  1 00:00:05.111: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to down
+*Mar  1 00:00:05.111: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/2, changed state to down
+*Mar  1 00:00:05.115: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/3, changed state to down
+*Mar  1 00:00:06.511: %LINK-5-CHANGED: Interface FastEthernet0/0, changed state to administratively down
+*Mar  1 00:00:06.515: %LINK-5-CHANGED: Interface FastEthernet0/1, changed state to administratively down
+*Mar  1 00:00:06.519: %LINK-5-CHANGED: Interface Ethernet1/0, changed state to administratively down
+*Mar  1 00:00:06.523: %LINK-5-CHANGED: Interface Ethernet1/1, changed state to administratively down
+*Mar  1 00:00:06.527: %LINK-5-CHANGED: Interface Ethernet1/2, changed state to administratively down
+*Mar  1 00:00:06.535: %LINK-5-CHANGED: Interface Ethernet1/3, changed state to administratively down
 R4#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
 R4(config)#line vty 0 14
@@ -848,31 +834,33 @@ Press RETURN to get started.
 
 
 
-*Mar  1 00:00:57.111: %SYS-5-CONFIG_I: Configured from console by console
-*Mar  1 00:00:57.683: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
-*Mar  1 00:00:58.155: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
-*Mar  1 00:00:58.495: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
-*Mar  1 00:00:59.155: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
+
+
+*Mar  1 00:01:52.631: %SYS-5-CONFIG_I: Configured from console by console
+*Mar  1 00:01:53.211: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback1, changed state to up
+*Mar  1 00:01:53.667: %LINK-3-UPDOWN: Interface Ethernet1/0, changed state to up
+*Mar  1 00:01:54.019: %LINK-3-UPDOWN: Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:54.667: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/0, changed state to up
 R4#
-*Mar  1 00:00:59.495: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
+*Mar  1 00:01:55.019: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet1/1, changed state to up
 R4#
 R4#configure terminal
 Enter configuration commands, one per line.  End with CNTL/Z.
-R4(config)#ip route 192.168.3.0 255.255.255.0 e1/0
-R4(config)#ip route 16.1.1.0 255.255.255.0 e1/1
 R4(config)#ip route 13.1.1.0 255.255.255.0 e1/0
-R4(config)#ip route 12.1.1.0 255.255.255.0 e1/1
 R4(config)#ip route 14.1.1.0 255.255.255.0 e1/0
+R4(config)#ip route 192.168.3.0 255.255.255.0 e1/0
 R4(config)#ip route 192.168.2.0 255.255.255.0 e1/0
-R4(config)#ip route 17.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 16.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 12.1.1.0 255.255.255.0 e1/1
 R4(config)#ip route 15.1.1.0 255.255.255.0 e1/1
+R4(config)#ip route 17.1.1.0 255.255.255.0 e1/1
 R4(config)#ip route 192.168.1.0 255.255.255.0 e1/1
 R4(config)#ip route 192.168.5.0 255.255.255.0 e1/1
 R4(config)#
 R4(config)#end
 R4#show running | include ip route
 
-*Mar  1 00:02:25.007: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/1
+*Mar  1 00:03:19.795: %SYS-5-CONFIG_I: Configured from console by consoleip route 12.1.1.0 255.255.255.0 Ethernet1/1
 ip route 13.1.1.0 255.255.255.0 Ethernet1/0
 ip route 14.1.1.0 255.255.255.0 Ethernet1/0
 ip route 15.1.1.0 255.255.255.0 Ethernet1/1
@@ -923,4 +911,7 @@ R4 con0 is now available
 
 
 Press RETURN to get started.
+
+
+
 
